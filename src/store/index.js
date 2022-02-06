@@ -7,14 +7,19 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     account: null,
+    error: null,
   },
   getters: {
     account: (state) => state.account,
+    error: (state) => state.error,
   },
   mutations: {
     setAccount(state, account) {
       state.account = account;
     },
+    setError(state, error) {
+      state.error = error;
+    }
   },
   actions: {
     async connect({ commit, dispatch }, connect) {

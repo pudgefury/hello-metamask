@@ -6,7 +6,8 @@
       </button>
     </div>
     <div v-else>
-      <div>address:{{ account }}</div>
+      <div>address: {{ account }}</div>
+      <div>error: {{ error }}</div>
     </div>
   </div>
 </template>
@@ -28,6 +29,9 @@ export default {
   computed: {
     account() {
       return this.$store.getters.account;
+    },
+    error() {
+      return this.$store.getters.error;
     },
   },
   components: {},
